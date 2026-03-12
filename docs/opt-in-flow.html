@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MiLB Game Alerts — Opt-In Flow</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:#1a1a1a;line-height:1.6;max-width:720px;margin:0 auto;padding:24px 16px;background:#f5f5f5}
+h1{font-size:1.5em;margin-bottom:4px}
+h2{font-size:1.2em;margin:28px 0 12px}
+p{margin:8px 0}
+.subtitle{color:#666;font-size:0.95em;margin-bottom:24px}
+.phone-frame{max-width:380px;margin:20px auto;background:#fff;border-radius:20px;padding:20px 16px;box-shadow:0 2px 12px rgba(0,0,0,0.1);border:1px solid #ddd}
+.phone-header{text-align:center;font-size:0.85em;color:#666;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid #eee}
+.msg{max-width:85%;padding:10px 14px;border-radius:16px;margin:8px 0;font-size:0.9em;line-height:1.4;clear:both}
+.msg-in{background:#e5e5ea;color:#000;float:left;border-bottom-left-radius:4px}
+.msg-out{background:#007aff;color:#fff;float:right;border-bottom-right-radius:4px}
+.msg-label{font-size:0.75em;color:#888;margin:16px 0 2px;clear:both}
+.msg-label.right{text-align:right}
+.clearfix::after{content:"";display:table;clear:both}
+.cta-box{background:#fff;border:2px solid #2563eb;border-radius:12px;padding:24px;margin:24px auto;max-width:420px;text-align:center}
+.cta-box .keyword{font-size:1.8em;font-weight:bold;color:#2563eb;letter-spacing:1px}
+.cta-box .number{font-size:1.3em;color:#1a1a1a;margin:8px 0}
+.cta-box .fine{font-size:0.8em;color:#666;margin-top:12px;line-height:1.5}
+.cta-box .fine a{color:#2563eb}
+.step{background:#fff;border:1px solid #e0e0e0;border-radius:8px;padding:16px;margin:16px 0}
+.step-num{display:inline-block;background:#2563eb;color:#fff;width:24px;height:24px;border-radius:50%;text-align:center;font-size:0.85em;line-height:24px;margin-right:8px}
+.note{background:#fef3c7;padding:12px 16px;border-radius:6px;margin:16px 0;font-size:0.9em}
+a{color:#2563eb}
+.footer{margin-top:48px;padding-top:16px;border-top:1px solid #ddd;font-size:0.85em;color:#666}
+</style>
+</head>
+<body>
+
+<h1>Opt-In Consent Flow</h1>
+<p class="subtitle">MiLB Game Alerts — SMS Consent Process Documentation</p>
+
+<h2>Call to Action</h2>
+<p>End users initiate subscription by texting a keyword to the service number. The call to action is presented as follows:</p>
+
+<div class="cta-box">
+<p>Want real-time baseball player stats after every game?</p>
+<p class="keyword">Text JOIN to (310) 919-4684</p>
+<p class="number">to sign up for MiLB Game Alerts</p>
+<p class="fine">Message frequency varies. Message and data rates may apply.<br>Reply HELP for help or STOP to cancel.<br><a href="terms.html">Terms of Service</a> · <a href="privacy.html">Privacy Policy</a></p>
+</div>
+
+<h2>How End Users Provide Consent</h2>
+
+<div class="step">
+<p><span class="step-num">1</span><strong>User texts JOIN to (310) 919-4684.</strong> The end user initiates contact by sending the keyword JOIN (or ALERTS or SUBSCRIBE) to the service number. This is the user's first action — no messages are sent by the service before this.</p>
+</div>
+
+<div class="step">
+<p><span class="step-num">2</span><strong>User receives opt-in confirmation.</strong> The system replies with a confirmation message that includes the program name, message frequency disclosure, data rates notice, and opt-out instructions.</p>
+</div>
+
+<div class="step">
+<p><span class="step-num">3</span><strong>User replies YES to confirm subscription.</strong> The user must reply YES to complete opt-in. No game alert messages are sent until this explicit YES reply is received and recorded.</p>
+</div>
+
+<h2>Opt-In Text Message Exchange</h2>
+<p>Below is the exact text message exchange between an end user and the service number (310) 919-4684 during opt-in:</p>
+
+<div class="phone-frame">
+<div class="phone-header">Text Message — (310) 919-4684</div>
+
+<p class="msg-label right">End user texts keyword to initiate:</p>
+<div class="clearfix">
+<div class="msg msg-out">JOIN</div>
+</div>
+
+<p class="msg-label">System sends opt-in confirmation:</p>
+<div class="clearfix">
+<div class="msg msg-in">MiLB Game Alerts: You've requested to receive real-time minor league baseball player stats via text. Reply YES to confirm your subscription or NO to decline. Msg frequency varies. Msg &amp; data rates may apply. Reply STOP anytime to cancel. Terms: https://mdruyanoff.github.io/milb-alerts/terms.html Privacy: https://mdruyanoff.github.io/milb-alerts/privacy.html</div>
+</div>
+
+<p class="msg-label right">End user replies YES to confirm:</p>
+<div class="clearfix">
+<div class="msg msg-out">YES</div>
+</div>
+
+<p class="msg-label">System confirms subscription:</p>
+<div class="clearfix">
+<div class="msg msg-in">You're subscribed to MiLB Game Alerts from (310) 919-4684! You'll receive player stats when games finish. Msg frequency varies. Msg &amp; data rates may apply. Reply STOP to unsubscribe, HELP for help.</div>
+</div>
+</div>
+
+<h2>Opt-Out Flow</h2>
+<p>Every alert message ends with: <strong>"Reply STOP to unsubscribe"</strong></p>
+
+<div class="phone-frame">
+<div class="phone-header">Text Message — (310) 919-4684</div>
+
+<p class="msg-label">Example game alert with opt-out footer:</p>
+<div class="clearfix">
+<div class="msg msg-in">Germán Márquez MLB/SD vs CHC<br>(W) 3.0 IP, 2 H, 0 R, 0 ER, 3 K, 0 BB, 0 HR<br>Reply STOP to unsubscribe</div>
+</div>
+
+<p class="msg-label right">End user opts out:</p>
+<div class="clearfix">
+<div class="msg msg-out">STOP</div>
+</div>
+
+<p class="msg-label">System confirms unsubscribe:</p>
+<div class="clearfix">
+<div class="msg msg-in">You have successfully been unsubscribed. You will not receive any more messages from this number. Reply START to resubscribe.</div>
+</div>
+</div>
+
+<div class="note">
+<strong>Key compliance points:</strong>
+<ul style="margin:8px 0 0 20px">
+<li>The end user always initiates by texting JOIN to (310) 919-4684</li>
+<li>No messages are sent by the service before the user texts first</li>
+<li>User must reply YES after the confirmation to complete opt-in</li>
+<li>Users who reply NO or do not respond receive no further messages</li>
+<li>Every alert message includes opt-out instructions</li>
+<li>Replying STOP immediately unsubscribes at the carrier level</li>
+<li>Consent is per-campaign, not transferable, and not a condition of any purchase</li>
+<li>No mobile information is shared with third parties for marketing or promotional purposes</li>
+</ul>
+</div>
+
+<div class="footer">
+<p><a href="index.html">Home</a> · <a href="terms.html">Terms of Service</a> · <a href="privacy.html">Privacy Policy</a></p>
+<p>Service number: (310) 919-4684</p>
+</div>
+
+</body>
+</html>
